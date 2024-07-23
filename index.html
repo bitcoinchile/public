@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RSI Notification</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #rsiChart4h, #rsiChart1h {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        #output4h {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #output1h {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #output15m {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #output1d {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #bitcoinPrice {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 1.5rem; text-align: center;">RSI Notification System</h1>
+    <div id="bitcoinPrice"></div>
+    <div id="output15m"></div>
+    <div id="output1h"></div>
+    <div id="output4h"></div>
+    <div id="output1d"></div>
+    
+    <canvas id="rsiChart4h"></canvas>
+    <canvas id="rsiChart1h"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

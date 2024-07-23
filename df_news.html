@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; }
+        a { text-decoration: none; color: #1a5594; }
+        a:hover { text-decoration: underline; }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .df {
+            color: rgb(232, 151, 0);
+        }
+    </style>
+    <script>
+        function isSafari() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isSafariBrowser = userAgent.includes('safari') && !userAgent.includes('chrome');
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+            return isSafariBrowser && isIOS;
+        }
+
+        function getQueryParam(param) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        function checkBrowserAndCountry() {
+            var country = getQueryParam('country');
+            
+            if (!isSafari() || country !== 'chile') {
+                document.body.innerHTML = '<p></p>';
+                window.location.href = 'https://www.google.cl';
+            }
+        }
+
+        window.onload = checkBrowserAndCountry;
+
+    </script>
+</head>
+<body>
+    <center>
+        <h1 class="df"> DF </h1>
+    </center>
+    <ul>
+    <!-- Insert your dynamic content here -->
+    <li><a href="https://www.df.cl/economia-y-politica/pais/javier-macaya-renuncio-a-la-presidencia-de-la-udi" target="_blank">Macaya renuncia a presidencia de la UDI ante cuestionamientos por declaraciones sobre caso que afecta a su padre</a></li>
+<li><a href="https://www.df.cl/economia-y-politica/gobierno/los-millonarios-fondos-de-emiratos-arabes-que-marcel-espera-conquistar" target="_blank">Los millonarios fondos de Emiratos Árabes que Marcel espera conquistar para atraer inversiones a Chile</a></li>
+<li><a href="https://www.df.cl/empresas/mineria/codelco-sqm-sofofa-y-amsa-la-abultada-agenda-en-chile-del-ministro-de" target="_blank">Codelco, SQM, Sofofa y Amsa: la abultada agenda en Chile del ministro de Industria y Recursos Minerales de Arabia Saudita</a></li>
+<li><a href="https://www.df.cl/internacional/economia/priscila-robledo-y-reaccion-de-los-mercados-la-pregunta-mas-importante" target="_blank">Priscila Robledo y candidatura de Harris: “La pregunta más importante ahora va a ser qué tanto es posible de ganarle a Trump”</a></li>
+<li><a href="https://www.df.cl/df-lab/innovacion-y-startups/vambe-startup-que-automatiza-canales-de-comunicacion-entre-empresas-y" target="_blank">Vambe, startup que automatiza canales de comunicación entre empresas y clientes con IA planea llegar a Colombia a fin de año</a></li>
+<li><a href="https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-cv9pd" target="_blank">Dólar sube a cerca de $ 950 y alcanza máximos de la sesión al inicio de la tarde a medida que el cobre sigue cayendo</a></li>
+<li><a href="https://www.df.cl/economia-y-politica/laboral-personas/el-a-b-y-c-de-lo-que-hay-que-hacer-para-no-fallar-en-la-aplicacion-de" target="_blank">El A, B y C de lo que hay que hacer para no fallar en la aplicación de la Ley Karin</a></li>
+<li><a href="https://www.df.cl/mercados/bolsa-monedas/bolsas-hoy-cv9pd" target="_blank">IPSA cae bajo los 6.600 puntos mientras Wall Street revierte sus avances con mercados atentos a resultados de Tesla y Alphabet</a></li>
+<li><a href="https://www.df.cl/economia-y-politica/macro/de-la-mano-del-cyber-day-ventas-diarias-del-comercio-minorista-anotan" target="_blank">De la mano del CyberDay, las ventas diarias del comercio minorista anotan en junio su mejor resultado en más de dos años</a></li>
+<li><a href="https://www.df.cl/mercados/renta-fija/caja-los-andes-debuta-en-mercados-internacionales-con-bono-por-us-300" target="_blank">Caja Los Andes debuta en mercados internacionales con bono por US$ 300 millones</a></li>
+<li><a href="https://www.df.cl/economia-y-politica/laboral-personas/la-cpc-consolidara-las-propuestas-de-los-privados-para-abordar-la-crisis" target="_blank">La CPC consolidará las propuestas de los privados para abordar la crisis de seguridad</a></li>
+<li><a href="https://www.df.clhttps://dfsud.com/financial-times/la-luna-de-miel-de-milei-con-el-mercado-llega-a-su-fin-en-medio-de" target="_blank">La luna de miel de Milei con el mercado llega a su fin en medio de cuestionamientos de inversionistas a su plan económico</a></li>
+<li><a href="https://www.df.cl/mercados/pensiones/pensiones-gobierno-se-reune-con-la-oposicion-para-buscar-alternativas" target="_blank">Pensiones: Gobierno se reúne con la oposición para buscar alternativas de financiamiento a propuesta de préstamo</a></li>
+<li><a href="https://www.df.cl/a-kamala-harris-se-la-ve-como-una-persona-bastante-a-la-izquierda-por" target="_blank">Sebastián Edwards: A Harris “se la ve como una persona bastante a la izquierda, por lo que deberá nominar un contrapeso”</a></li>
+<li><a href="https://www.df.cl/internacional/politica/renuncia-la-directora-del-servicio-secreto-de-eeuu-tras-asumir" target="_blank">Renuncia la directora del Servicio Secreto de EEUU tras asumir responsabilidad por fallas en mitin en que se intentó matar a Trump</a></li>
+<li><a href="https://www.df.cl/mercados/bolsa-monedas/sebastian-senzacqua-gerente-de-economia-y-estrategia-de-bice" target="_blank">Sebastián Senzacqua, de BICE Inversiones: “La atención del mercado va a estar en la composición del Congreso de EEUU en esta elección”</a></li>
+<li><a href="https://www.df.clhttps://dfsud.com/america/regulador-de-brasil-aprueba-compra-de-los-activos-de-starbucks-en-brasil" target="_blank">Regulador de Brasil aprueba compra de los activos locales de Starbucks por parte de la dueña de Burger King en el país</a></li>
+<li><a href="https://www.df.cl/empresas/energia/enel-chile-inicia-operacion-comercial-de-nueva-central-fotovoltaica-que" target="_blank">Enel Chile inicia operación comercial de nueva central fotovoltaica que operará en conjunto con uno de sus parques eólicos</a></li>
+<li><a href="https://www.df.cl/internacional/economia/las-ventas-de-viviendas-usadas-en-estados-unidos-sufren-fuerte-caida-en" target="_blank">Las ventas de viviendas usadas en Estados Unidos sufren una fuerte caída en junio</a></li>
+<li><a href="https://www.df.cl/empresas/multinacionales/resultados-de-coca-cola-superan-estimaciones-y-compania-mejora-las" target="_blank">Resultados de Coca-Cola superan estimaciones y compañía mejora las perspectivas para todo el año gracias a los precios más altos</a></li>
+<li><a href="https://www.df.cl/empresas/multinacionales/general-motors-supera-las-estimaciones-de-ganancias-y-eleva-sus" target="_blank">General Motors supera las estimaciones de ganancias y eleva sus previsiones gracias a la fuerte demanda de camiones</a></li>
+<li><a href="https://www.df.cl/empresas/multinacionales/spotify-aumenta-sus-suscriptores-pagados-en-el-segundo-trimestre" target="_blank">Spotify aumenta sus suscriptores pagados en el segundo trimestre superando las estimaciones de los analistas</a></li>
+<li><a href="https://www.df.cl/empresas/mineria/codelco-logra-credito-de-us-532-millones-para-acelerar-descarbonizacion" target="_blank">Codelco logra crédito de US$ 532 millones para acelerar descarbonización en sus faenas</a></li>
+<li><a href="https://www.df.cl/mercados/fondos-de-inversion/uso-de-ia-y-consolidar-negocio-en-mexico-las-prioridades-de-la-nueva" target="_blank">IA y consolidar negocio en Chile, prioridades de la nueva country manager de Fintual</a></li>
+<li><a href="https://www.df.cl/freeport-mcmoran-invertira-us-7-500-millones-en-expansion-de-el-abra-y" target="_blank">Freeport McMoran invertirá US$ 7.500 millones en expansión de El Abra y consolida nuevo ciclo de crecimiento de la minería</a></li>
+
+    </ul>
+</body>
+</html>
