@@ -61,7 +61,7 @@ async function processInterval(symbol, interval, rsiPeriod, rsiThreshold) {
     const data = await fetchData(symbol, interval);
     const rsi = calculateRSI(data, rsiPeriod);
     const lastRSI = rsi[rsi.length - 1];
-    const message = `Last RSI for ${symbol} on ${interval}: ${lastRSI.toFixed(2)}`;
+    const message = `Last RSI (${interval}): ${lastRSI.toFixed(2)}`;
     console.log(message);
 
     document.getElementById(`output${interval}`).innerText += message + '\n';
