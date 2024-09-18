@@ -22,7 +22,7 @@ async function fetchBitcoinPrice() {
     const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
     const data = await response.json();
     const price = parseFloat(data.price);
-    document.getElementById('bitcoinPrice').innerText = `Current Bitcoin Price: $${price.toFixed(2)}`;
+    document.getElementById('bitcoinPrice').innerText = `Price: $${price.toFixed(2)}`;
     return price;
 }
 
@@ -61,7 +61,7 @@ async function processInterval(symbol, interval, rsiPeriod, rsiThreshold) {
     const data = await fetchData(symbol, interval);
     const rsi = calculateRSI(data, rsiPeriod);
     const lastRSI = rsi[rsi.length - 1];
-    const message = `Last RSI (${interval}): ${lastRSI.toFixed(2)}`;
+    const message = `RSI (${interval}): ${lastRSI.toFixed(2)}`;
     console.log(message);
 
     document.getElementById(`output${interval}`).innerText += message + '\n';
