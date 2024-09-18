@@ -1,8 +1,7 @@
 const symbol = 'BTCUSDT';
-const waitingSeconds = 60;
+const waitingSeconds = 10;  // Change to 10 seconds
 const rsiThreshold = 31;
 const intervals = ['15m', '1h', '4h', '1d'];
-
 
 async function fetchData(symbol, interval) {
     const baseUrl = 'https://api.binance.com/api/v3/klines';
@@ -75,7 +74,6 @@ async function processInterval(symbol, interval, rsiPeriod, rsiThreshold) {
     // renderChart(data, rsi, interval);
 }
 
-
 function renderChart(data, rsi, interval) {
     const ctx = document.getElementById(`rsiChart${interval}`).getContext('2d');
     new Chart(ctx, {
@@ -110,23 +108,20 @@ async function main() {
     try {
         
         while (true) {
-            document.getElementById('bitcoinPrice').innerText = ''; // Clear previous o
-            document.getElementById('output4h').innerText = ''; // Clear previous output
-            document.getElementById('output1h').innerText = ''; // Clear previous output
-            document.getElementById('output15m').innerText = ''; // Clear previous output
+            document.getElementById('bitcoinPrice').innerText = ''; // Clear previous output
+            document.getElementById('output4h').innerText = ''; 
+            document.getElementById('output1h').innerText = ''; 
+            document.getElementById('output15m').innerText = ''; 
             document.getElementById('output1d').innerText = '';
         
             await fetchBitcoinPrice(); // Fetch and display Bitcoin price initially
             
-            // await processInterval(symbol, '1h', 14, rsiThreshold);
-            // await processInterval(symbol, '4h', 14, rsiThreshold);
             for (const interval of intervals) {
                 await processInterval(symbol, interval, 14, rsiThreshold);
             }
             
-            
             console.log(`Waiting for ${waitingSeconds} seconds...`);
-            await new Promise(resolve => setTimeout(resolve, waitingSeconds * 1000));
+            await new Promise(resolve => setTimeout(resolve, waitingSeconds * 1000)); // Wait for 10 seconds now
         }
     } catch (error) {
         console.error('Error:', error);
