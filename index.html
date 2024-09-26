@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-
     <!-- Definir el ícono para la pantalla de inicio en iOS -->
     <link rel="apple-touch-icon" href="./bitcoin.png" sizes="180x180">
     
@@ -22,41 +21,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white for better contrast */
+            font-size: 1.2rem; /* Increase font size slightly */
         }
         #rsiChart4h, #rsiChart1h {
             width: 100%;
             height: 300px;
             margin-bottom: 20px;
         }
-        #output4h {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #output1h {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #output15m {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #output1d {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #bitcoinPrice {
-            font-size: 1.25rem;
+        #output4h, #output1h, #output15m, #output1d, #bitcoinPrice {
+            font-size: 1.35rem; /* Increase font size for output sections */
             margin-bottom: 20px;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1 style="font-size: 1.5rem; text-align: center;">bitcoin</h1>
+    <h1 style="font-size: 1.6rem; text-align: center;">bitcoin</h1>
     <div id="bitcoinPrice"></div>
     <div id="output15m"></div>
     <div id="output1h"></div>
