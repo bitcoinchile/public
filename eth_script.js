@@ -1,4 +1,5 @@
-const symbol = 'BTCUSDT';
+
+const symbol = 'ETHUSDT';
 const waitingSeconds = 10;  // Change to 10 seconds
 const rsiThreshold = 31;
 const intervals = ['15m', '1h', '4h', '1d'];
@@ -19,7 +20,7 @@ async function fetchData(symbol, interval) {
 }
 
 async function fetchBitcoinPrice() {
-    const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
+    const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT');
     const data = await response.json();
     const price = parseFloat(data.price);
     document.getElementById('bitcoinPrice').innerText = `Price: $${price.toFixed(2)}`;
