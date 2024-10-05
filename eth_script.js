@@ -23,7 +23,7 @@ async function fetchBitcoinPrice() {
     const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT');
     const data = await response.json();
     const price = parseFloat(data.price);
-    document.getElementById('bitcoinPrice').innerText = `Price: $${price.toFixed(2)}`;
+    document.getElementById('bitcoinPrice').innerText = `Price: $${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     return price;
 }
 
