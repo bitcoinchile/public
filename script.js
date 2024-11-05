@@ -19,7 +19,7 @@ async function fetchData(symbol, interval) {
 }
 
 async function fetchBitcoinPrice() {
-    const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
+    const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDC');
     const data = await response.json();
     const price = parseFloat(data.price);
     document.getElementById('bitcoinPrice').innerText = `Price: $${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
